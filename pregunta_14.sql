@@ -33,6 +33,11 @@
 --  columna c21 en la tabla tbl2, para aquellos registros
 --  con c13 mayor a 400.
 --
+SELECT K0, avg(c21) 
+FROM tbl1 
+tbl1, tbl2 tbl2 
+WHERE tbl1.K1 = tbl2.K1 
+AND tbl1.c13 > 400 GROUP BY K0;
 --  Rta/
 --  K0    avg(c21)
 --  0  A  593.495000
